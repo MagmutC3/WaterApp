@@ -1,15 +1,9 @@
 # WaterApp
 
 # Initial setup
+https://python.land/virtual-environments/virtualenv
 ```
-python -m venv myenv
-myenv\Scripts\Activate.ps1
-
 pip install -r requirements.txt
-```
-to turn off:
-```
-deactivate
 ```
  
 # Kryteria:
@@ -51,6 +45,7 @@ Endpoints:
 * Calc watering
 * Watering history
 * New field
+* Add/edit watering event
 
 ```mermaid
     graph TD;
@@ -62,10 +57,11 @@ Endpoints:
     A --> E(Home/field list)
     E --> F(Field overview)
     E --> G(New field)
-    G -.->Ga(step1)
-    Ga-.->Gb(step2)
-    Gb-.->Gc(step3)
-    Gc-.->Gd(step4)
-    Gd-.->Ge(step5)
-
+    G -.->Ga(step 1)
+    Ga-.->Gb(...)
+    Gb-.->Gc(step n)
+    Gc-.->Gd(save)
+    F --> H(Calc watering)
+    F --> I(Watering history)
+    I --> J(Add/edit watering event)
 ```

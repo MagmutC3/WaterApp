@@ -1,0 +1,14 @@
+## pip install -r requirements.txt
+# Remember to setup a virtual env
+## python -m venv myEnvName 
+
+# Backend Dependencies
+bottle==0.12.25    # Bottle framework for Python
+firebase-admin==6.1.0   # Firebase Admin SDK for Python
+
+# Frontend Dependencies
+firebase==4.0.1   # Firebase JavaScript SDK for authentication
+react==4.3.0   # React library
+
+# Additional Dependencies (if needed)
+# Add any additional dependencies required for your specific project here
