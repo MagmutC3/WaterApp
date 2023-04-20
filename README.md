@@ -1,10 +1,8 @@
 # WaterApp
 
 # Initial setup
-https://python.land/virtual-environments/virtualenv
-```
-pip install -r requirements.txt
-```
+
+`npm install`
  
 # Kryteria:
 
@@ -26,7 +24,6 @@ h. Wykorzystaj dowolną wybraną usługę Firebase (oprócz Authentication i Clo
 
 # Tech stack:
 - React.js
-- FastAPI
 - Firebase Authentication
 - Cloud Firestore
 - trzecia usługa z Firebase https://firebase.google.com/products-build
