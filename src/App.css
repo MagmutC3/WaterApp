@@ -1,38 +1,194 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #aaa;
+  text-decoration: none;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #111;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(12px + 2vmin);
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"] {
+  width: 80%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 50%;
+  padding: 0.5rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #333;
+}
+
+th {
+  background-color: #111;
+  border: 1px solid #444;
+  padding: 12px;
+  text-align: left;
+}
+
+tr {
+  border: 1px solid #444;
+}
+
+td {
+  border: 1px solid #444;
+  padding: 12px;
+}
+
+tr:nth-child(even) {
+  background-color: #444;
+}
+
+tr:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 600px) {
+  thead tr {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  td {
+    display: block;
   }
+
+  th {
+    border: none;
+    background-color: #444;
+    padding: 8px;
+  }
+
+  tr {
+    border: none;
+    background-color: #222
+  }
+}
+.about-us {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.about-us h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004466;
+}
+
+.about-us-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  margin-right: 40px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
 }

@@ -1,56 +1,38 @@
-import React, { useState } from 'react';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter,
-          Routes,
-          Route
-        } from "react-router-dom";
-import logo from './logo.svg';
-import './App.css';
-
-import Login from './pages/Login';
-import Home from './pages/Home';
-import Layout from './pages/Layout';
-
-import handleSubmit from './handles/handlesubmit';
-import { useRef } from 'react';
+import "./App.css";
+import Login from "./Login";
+import About from "./About";
+import NotFound from "./NotFound";
+import Todo from "./Todo";
+import Geo from "./Geo";
+import AddField from "./AddField";
 
 
-export default function App() {
+import {
+  Link,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Login />} />
-          <Route path="home" element={<Home />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/todo" element={<Todo />}></Route>
+          <Route path="/geo" element={<Geo />}></Route>
+          <Route path="/addfield" element={<AddField />}></Route>
+
+          <Route path="/notFound" element={<NotFound />}></Route>
+          <Route path="*" element={<Navigate to="/notFound" replace />} />
+          <Route path="/" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
-
-
-/*
-function App() {
-    const dataRef = useRef()
-   
-    const submithandler = (e) => {
-      e.preventDefault()
-      handleSubmit(dataRef.current.value)
-      dataRef.current.value = ""
-    }
-   
-    return (
-      <div className="App">
-        <form onSubmit={submithandler}>
-          <input type= "text" ref={dataRef} />
-          <button type = "submit">Save</button>
-        </form>
-      </div>
-    );
-  }
-
 export default App;
-*/
