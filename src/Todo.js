@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { collection, query, addDoc, getDocs, orderBy, where } from "firebase/firestore";
+import {
+  collection,
+  query,
+  addDoc,
+  getDocs,
+  orderBy,
+  where,
+} from "firebase/firestore";
 import { db } from "./firebase.js";
 import {
   BrowserRouter as Router,
@@ -57,7 +64,24 @@ const Todo = () => {
           <p className="about-us-button">About Us</p>
         </Link>
         <h1 className="header">Lista pól</h1>
-
+        <div className="btn-container">
+          <Link to="/addfield">
+            <button type="submit" className="btn">
+              Dodaj Pole
+            </button>
+          </Link>
+          <Link to="/tools">
+            <button
+              type="submit"
+              className="btn"
+              style={{ marginLeft: "25px" }}
+            >
+              Narzędzia Rolnika
+            </button>
+          </Link>
+        </div>
+        <br />
+        <br />
         <div>
           <div className="todo-content">
             {todos?.map((todo, i) => (
@@ -81,21 +105,21 @@ const Todo = () => {
                     <h2>{todo.name}</h2>
                     <p>Szerokość geograficzna: {todo.latitude}</p>
                     <p>Długość geograficzna: {todo.longitude}</p>
-                    <p>Data dodania: {new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(todo.timestamp)}</p>
+                    <p>
+                      Data dodania:{" "}
+                      {new Intl.DateTimeFormat("en-US", {
+                        year: "numeric",
+                        month: "2-digit",
+                        day: "2-digit",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        second: "2-digit",
+                      }).format(todo.timestamp)}
+                    </p>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-          <br />
-          <div className="btn-container">
-            <br />
-            <br />
-            <Link to="/addfield">
-              <button type="submit" className="btn">
-                Dodaj Pole
-              </button>
-            </Link>
           </div>
           <br />
           <br />

@@ -3,6 +3,7 @@ import Login from "./Login";
 import About from "./About";
 import NotFound from "./NotFound";
 import Todo from "./Todo";
+import Tools from "./Tools";
 import Geo from "./Geo";
 import AddField from "./AddField";
 
@@ -25,7 +26,7 @@ function App() {
           <Route path="/todo" element={<Todo />}></Route>
           <Route path="/geo" element={<Geo />}></Route>
           <Route path="/addfield" element={<AddField />}></Route>
-
+          <Route path="/tools" element={<Tools />}></Route>
           <Route path="/notFound" element={<NotFound />}></Route>
           <Route path="*" element={<Navigate to="/notFound" replace />} />
           <Route path="/" element={<Navigate to="/login" replace />} />

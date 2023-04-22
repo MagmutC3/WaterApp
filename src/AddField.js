@@ -78,7 +78,7 @@ function AddField() {
       />
       <br />
         <button type="submit" className="btn" onClick={addTodo}>
-          Dodaj Pole z własną lokalizacją
+          Dodaj Pole
         </button>
       <br />
       <br />
