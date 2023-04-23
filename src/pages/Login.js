@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/auth';
+import React from "react";
+import "../App.css";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
-// import logo from '../logo.svg';
-
-const Login = () => {
-  // Add your component logic here
-
-  return (
-    <div className='Login'>
-      <header className='Login-header'>
-        {/* Add your component JSX here */}
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h1>Welcome to the Login Component!</h1>
-        <p>This is the login page of your app.</p>
-      </header>
-    </div>
-  );
-};
-
-
-
-export default Login;
+export default function Login() {
+    return (
+      <div id="login-container">
+        <h1>Login</h1>
+        <form>
+          <label htmlFor="username">Username:</label>
+          <input type="text" id="username" name="username" />
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" name="password" />
+          <Link to="/todo">
+            <button type="submit">Login</button>
+          </Link>
+        </form>
+        <Link to="/about">
+            <p className="about-us-button">About Us</p>
+          </Link>
+      </div>
+    );
+  }

@@ -1,23 +1,77 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
+/yarn.lock
+/.npm
 
-# testing
-/coverage
-
-# production
+# Build output
 /build
+/.firebase
+/firebase-debug.log
+/.firebaserc
 
-# misc
-.DS_Store
+# Environment variables
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Test coverage
+/coverage
+
+# Miscellaneous
+.DS_Store
+*.log
+*.log.*
+*.swp
+*.tmp
+*.bak
+*.backup
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.sqlite3
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.svg
+*.woff
+*.woff2
+*.ttf
+*.eot
+*.pdf
+
+# Firebase emulator data
+/.emulator
+/firestore.rules
+/firestore.indexes.json
+/functions/*.env.json
+/functions/local-debugging.env.json
+
+# Editor or IDE specific files
+*.idea
+*.vscode
+*.sublime*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw??
+*.sln
+*.suo
+*.user
+*.sln.docstates
+*.cache
+*.log
+*.vs
+
+# OS or machine specific files
+.DS_Store
+Thumbs.db

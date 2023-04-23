@@ -1,15 +1,11 @@
-import React from 'react';
+import React from "react";
+import "../App.css";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
-const Home = () => {
-  // Add your component logic here
-
-  return (
-    <div>
-      {/* Add your component JSX here */}
-      <h1>Welcome to the Home Component!</h1>
-      <p>This is the home page of your app.</p>
-    </div>
-  );
+export default function Home() {
+    return (
+        <div>
+            <h1>Home</h1>
+        </div>
+    ) 
 };
-
-export default Home;
