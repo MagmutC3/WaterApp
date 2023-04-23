@@ -1,6 +1,8 @@
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import SignIn from "./components/auth/SignIn";
+
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Todo from "./pages/Todo";
@@ -25,6 +27,7 @@ function App() {
         <Routes>
           <Route exact path="/" component={Home}/>
 
+          <Route exact path="/signin" element={<SignIn />}></Route>
 
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/login" element={<Login />}></Route>

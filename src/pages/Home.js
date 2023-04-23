@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.css";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 
 export default function Home() {
     return (
@@ -9,3 +11,5 @@ export default function Home() {
         </div>
     ) 
 };
+
+  
