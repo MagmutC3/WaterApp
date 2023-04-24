@@ -1,11 +1,11 @@
 import "./App.css";
-import Login from "./Login";
-import About from "./About";
-import NotFound from "./NotFound";
-import Todo from "./Todo";
-import Tools from "./Tools";
-import Geo from "./Geo";
-import AddField from "./AddField";
+import Login from "./pages/Login";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Todo from "./pages/Todo";
+import Tools from "./pages/Tools";
+import Geo from "./pages/Geo";
+import AddField from "./pages/AddField";
 
 
 import {

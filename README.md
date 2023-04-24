@@ -3,7 +3,8 @@
 # Initial setup
 
 `npm install`
-`firebase init`
+`firebase init firestore hosting auth`
+
 
 If `firebase init` does not work:
 `npm install -g firebase-tools`
