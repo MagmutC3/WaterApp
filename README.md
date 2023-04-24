@@ -3,6 +3,10 @@
 # Initial setup
 
 `npm install`
+`firebase init`
+
+If `firebase init` does not work:
+`npm install -g firebase-tools`
 
 # Kryteria:
 

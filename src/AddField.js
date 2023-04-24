@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, Component } from "react";
 import { collection, addDoc, getDocs } from "firebase/firestore";
-import { db } from "./firebase.js";
+import { firestore } from "./firebase.js";
 import { render } from "react-dom";
 import {
   BrowserRouter as Router,
@@ -36,7 +36,7 @@ function AddField() {
     }
 
     try {
-      const docRef = await addDoc(collection(db, "satagro"), {
+      const docRef = await addDoc(collection(firestore, "satagro"), {
         name: todo.charAt(0).toUpperCase() + todo.slice(1),
         latitude: langer,
         longitude: longer,

@@ -7,7 +7,7 @@ import {
   orderBy,
   where,
 } from "firebase/firestore";
-import { db } from "./firebase.js";
+import { firestore } from "./firebase.js";
 import {
   BrowserRouter as Router,
   Link,
@@ -24,7 +24,7 @@ const Todo = () => {
   const [todos, setTodos] = useState([]);
 
   // const fetchPost = async () => {
-  //   await getDocs(collection(db, "satagro")).then((querySnapshot) => {
+  //   await getDocs(collection(firestore, "satagro")).then((querySnapshot) => {
   //     const newData = querySnapshot.docs.map((doc) => ({
   //       ...doc.data(),
   //       id: doc.id,
@@ -35,7 +35,7 @@ const Todo = () => {
   // };
 
   const fetchPost = async () => {
-    const q = query(collection(db, "satagro"), orderBy("timestamp", "desc"));
+    const q = query(collection(firestore, "satagro"), orderBy("timestamp", "desc"));
 
     const querySnapshot = await getDocs(q);
     console.log(querySnapshot.docs);
