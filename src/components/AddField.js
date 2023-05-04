@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, Component } from "react";
 import { collection, addDoc, getDocs } from "firebase/firestore";
-import { firestore } from "../firebase-config/firebase";
+import { firestore } from "../config/firebase";
 import {
   BrowserRouter as Router,
   Link,

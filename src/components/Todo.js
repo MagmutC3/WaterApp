@@ -7,7 +7,7 @@ import {
   orderBy,
   where,
 } from "firebase/firestore";
-import { firestore } from "../firebase-config/firebase";
+import { firestore } from "../config/firebase";
 import {
   BrowserRouter as Router,
   Link,

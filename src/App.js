@@ -1,11 +1,13 @@
 import "./App.css";
-import Login from "./pages/Login";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import Todo from "./pages/Todo";
-import Tools from "./pages/Tools";
-import Geo from "./pages/Geo";
-import AddField from "./pages/AddField";
+import Login from "./components/Login";
+import About from "./components/About";
+import NotFound from "./components/NotFound";
+import Todo from "./components/Todo";
+import Tools from "./components/Tools";
+import Geo from "./components/Geo";
+import AddField from "./components/AddField";
+
+import Home from "./components/Home";
 
 
 import {
@@ -30,6 +32,8 @@ function App() {
           <Route path="/notFound" element={<NotFound />}></Route>
           <Route path="*" element={<Navigate to="/notFound" replace />} />
           <Route path="/" element={<Navigate to="/login" replace />} />
+
+          <Route path="/home" element={<Home />}></Route>
         </Routes>
       </Router>
     </div>
