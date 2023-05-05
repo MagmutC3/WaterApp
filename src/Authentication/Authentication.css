@@ -1,0 +1,38 @@
+.authentication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.authentication__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.authentication__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  background: 0;
+  border: 0;
+  padding: 5px 10px 5px 10px;
+  margin: 10px 15px 10px 15px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.authentication__button:hover {
+  cursor: pointer;
+  background-color: #1e1e1e;
+}
+
+.authentication__button > span {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 10px;
+}
