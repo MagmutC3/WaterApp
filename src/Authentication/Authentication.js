@@ -1,11 +1,10 @@
 import React from "react";
 import "./Authentication.css";
-import Login from "./Login/Login";
+import Login from "./login/Login";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 function Authentication() {
-  // state - downloading and storing field data
-  const [fields, setFields] = React.useState([]);
+
   return (
     <div className="authentication">
       <h1>Placeholder text to remove later in line 16</h1>

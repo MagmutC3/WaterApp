@@ -6,8 +6,8 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
-import MyFields from './MyFields/MyFields';
-import Authentication from './Authentication/Authentication';
+import MyFields from './myfields/MyFields';
+import Authentication from './authentication/Authentication';
 
 function App() {
   return (
