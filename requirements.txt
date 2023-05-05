@@ -9,6 +9,7 @@ firebase-admin==6.1.0   # Firebase Admin SDK for Python
 # Frontend Dependencies
 firebase==4.0.1   # Firebase JavaScript SDK for authentication
 react==4.3.0   # React library
+leaflet==1.9.3
 
 # Additional Dependencies (if needed)
 # Add any additional dependencies required for your specific project here
