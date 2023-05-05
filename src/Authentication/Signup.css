@@ -1,0 +1,12 @@
+.signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.516);
+    padding: 50px;
+}
+
+.signup > input{
+    padding: 12px;
+}

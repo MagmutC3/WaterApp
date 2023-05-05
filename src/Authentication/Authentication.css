@@ -8,6 +8,12 @@
   color: white;
 }
 
+.authentication__logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
 .authentication__buttons {
   display: flex;
   flex-direction: column;

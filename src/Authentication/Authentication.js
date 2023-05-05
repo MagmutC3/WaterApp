@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Authentication.css";
-import Login from "./login/Login";
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import Login from "./Login";
+import Signup from "./Signup";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 function Authentication() {
-
+  const [active, setActive] = useState("login");
+  const handleChange = () => {
+    if (active === "login") {
+      setActive("signup");
+    } else {
+      setActive("login");
+    }
+  };
   return (
     <div className="authentication">
-      <h1>Placeholder text to remove later in line 16</h1>
       {/** Login page should contain: */}
       {/** Logo */}
       <div className="authentication__logo">
@@ -18,26 +25,36 @@ function Authentication() {
       </div>
       {/** Username and password inputs; login button */}
       <div className="authentication__login">
-        <Login />
+        {active === "login" ? <Login /> : <Signup />}
       </div>
       <div className="authentication__buttons">
-        {/** Register button */}
-        <div className="authentication__button">  
+        {/** already have an account/don't have an account */}
+        <div className="authentication__button">
           <OpenInNewIcon />
-          <span>Register</span>
+          {active === "login" ? (
+            <>
+              <span>Don't have an account?</span>{" "}
+              <button onClick={handleChange}>Sign up</button>
+            </>
+          ) : (
+            <>
+              <span>Already have an account?</span>{" "}
+              <button onClick={handleChange}>Log in</button>
+            </>
+          )}
         </div>
         {/** Forgot password button */}
-        <div className="authentication__button">  
+        <div className="authentication__button">
           <OpenInNewIcon />
           <span>Forgot password?</span>
         </div>
         {/** Privacy button */}
-        <div className="authentication__button">  
+        <div className="authentication__button">
           <OpenInNewIcon />
           <span>Privacy</span>
         </div>
         {/** About Us button */}
-        <div className="authentication__button">  
+        <div className="authentication__button">
           <OpenInNewIcon />
           <span>About Us</span>
         </div>

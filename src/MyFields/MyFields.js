@@ -2,8 +2,19 @@ import React, { useState } from "react";
 import "./MyFields.css";
 import Field from "./fields/Field";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "firebase/auth";
+import { logOutUser } from "../features/userSlice";
+import { auth } from "../config/firebase";
 
 function MyFields() {
+  
+  const user = useSelector((state) => state.data.user.user);
+  const dispatch = useDispatch();
+  const handelLogout = () => {
+    dispatch(logOutUser());
+    signOut(auth);
+  };
 
   const [fields, setFields] = useState([
     {
@@ -29,6 +40,9 @@ function MyFields() {
         </div>
         <div className="myfields__topUserIcon">
           <AccountCircleIcon />
+        </div>
+        <div className="myfields__topLogoutButton">
+          <button onClick={handelLogout}>Log out</button>
         </div>
       </div>
       <div className="myfields__fieldList">
