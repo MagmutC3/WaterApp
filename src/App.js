@@ -1,10 +1,11 @@
 import "./App.css";
-import Login from "./Login";
-import About from "./About";
-import NotFound from "./NotFound";
-import Todo from "./Todo";
-import Geo from "./Geo";
-import AddField from "./AddField";
+import Login from "./pages/Login";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Todo from "./pages/Todo";
+import Tools from "./pages/Tools";
+import Geo from "./pages/Geo";
+import AddField from "./pages/AddField";
 
 
 import {
@@ -25,7 +26,7 @@ function App() {
           <Route path="/todo" element={<Todo />}></Route>
           <Route path="/geo" element={<Geo />}></Route>
           <Route path="/addfield" element={<AddField />}></Route>
-
+          <Route path="/tools" element={<Tools />}></Route>
           <Route path="/notFound" element={<NotFound />}></Route>
           <Route path="*" element={<Navigate to="/notFound" replace />} />
           <Route path="/" element={<Navigate to="/login" replace />} />
