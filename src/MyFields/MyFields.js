@@ -6,9 +6,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
 import { logOutUser } from "../features/userSlice";
 import { auth } from "../config/firebase";
+import { useNavigate } from "react-router-dom";
+import AddField from "./fields/AddField";
 
 function MyFields() {
-  
+  const navigate = useNavigate();
+
+  const handleToolsButtonClick = () => {
+    navigate("/tools");
+  };
+
   const user = useSelector((state) => state.data.user.user);
   const dispatch = useDispatch();
   const handelLogout = () => {
@@ -18,16 +25,16 @@ function MyFields() {
 
   const [fields, setFields] = useState([
     {
-      name: "field1",
+      name: "Warszawa",
       image: "https://uek.krakow.pl/static/images/authorities-bg.png",
     },
     {
-      name: "Rakowicka16",
+      name: "Ohio",
       image:
-        "https://i1.rgstatic.net/ii/profile.image/711433167839232-1546630293092_Q512/Janusz-Stal.jpg",
+        "https://www.powerblogs.com/wp-content/uploads/2020/01/images2561-5e290e46c0c93-1024x683.jpg",
     },
     {
-      name: "Kocham Antychrysta",
+      name: "Zakopane",
       image: "https://assets.vg247.com/current/2017/07/Destiny-2-Farm.jpg",
     },
   ]);
@@ -35,9 +42,7 @@ function MyFields() {
   return (
     <div className="myfields">
       <div className="myfields__top">
-        <div className="myfields__topUserName">
-          This is supposed to be the user name
-        </div>
+        <div className="myfields__topUserName">Logged in as: {user.email}</div>
         <div className="myfields__topUserIcon">
           <AccountCircleIcon />
         </div>
@@ -47,15 +52,13 @@ function MyFields() {
       </div>
       <div className="myfields__fieldList">
         {fields.map((field) => (
-          <Field
-            name={field.name}
-            image={field.image}
-          />
+          <Field name={field.name} image={field.image} />
         ))}
+        <AddField />
       </div>
       <div className="myfields__bottom">
         <div className="myfields__bottomToolsButton">
-          This is supposed to be a button
+          <button onClick={handleToolsButtonClick}>Go to My Tools</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,59 @@
+.addfield {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #ccc;
+  border-top: 3px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #ccc8d2;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.addfield h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.addfield__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 10px;
+}
+
+.addfield__form label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.addfield__form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.addfield__form button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #007aff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.addfield__form button[type="button"] {
+  background-color: #ffffff;
+  color: #007aff;
+  border: 1px solid #007aff;
+}

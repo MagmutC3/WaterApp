@@ -14,6 +14,14 @@
   margin-bottom: 20px;
 }
 
+.authentication__logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
 .authentication__buttons {
   display: flex;
   flex-direction: column;

@@ -19,7 +19,7 @@ function Authentication() {
       {/** Logo */}
       <div className="authentication__logo">
         <img
-          src="https://naiadcoin.com/wp-content/uploads/2022/09/naiad_logo.svg"
+          src="https://game-icons.net/icons/ffffff/000000/1x1/delapouite/corn.png"
           alt="appLogo"
         ></img>
       </div>
@@ -44,20 +44,20 @@ function Authentication() {
           )}
         </div>
         {/** Forgot password button */}
-        <div className="authentication__button">
+        <button className="authentication__button">
           <OpenInNewIcon />
           <span>Forgot password?</span>
-        </div>
+        </button>
         {/** Privacy button */}
-        <div className="authentication__button">
+        <button className="authentication__button">
           <OpenInNewIcon />
           <span>Privacy</span>
-        </div>
+        </button>
         {/** About Us button */}
-        <div className="authentication__button">
+        <button className="authentication__button">
           <OpenInNewIcon />
           <span>About Us</span>
-        </div>
+        </button>
       </div>
     </div>
   );
