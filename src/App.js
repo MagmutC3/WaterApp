@@ -37,8 +37,19 @@ function App() {
 
   
   const user = useSelector((state) => state.data.user.user);
+  const isLoading = useSelector((state) => state.data.user.isLoading);
 
-  return <div className="app">{user ? <MyFields /> : <Authentication />}</div>;
+  return (
+    <div className="app">
+      {isLoading ? (
+        <div class="loader-container">
+          <div class="loader"></div>
+        </div>
+      ) : (
+        <>{user ? <MyFields /> : <Authentication />}</>
+      )}
+    </div>
+  );
 }
 
 export default App;
