@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import swDev from './swDev'
 import { Provider } from 'react-redux';
 import { store } from './app/store';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,5 +14,9 @@ root.render(
     <App />
   </Provider>
 );
+
+serviceWorkerRegistration.register();
+
+reportWebVitals();
 
 swDev();

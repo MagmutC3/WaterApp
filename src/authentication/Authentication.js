@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Authentication.css";
 import Login from "./Login";
 import Signup from "./Signup";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 function Authentication() {
+  const navigate = useNavigate();
   const [active, setActive] = useState("login");
   const handleChange = () => {
     if (active === "login") {
@@ -29,32 +31,31 @@ function Authentication() {
       </div>
       <div className="authentication__buttons">
         {/** already have an account/don't have an account */}
-        <div className="authentication__button">
+        <div className="authentication__button" onClick={handleChange}>
           <OpenInNewIcon />
           {active === "login" ? (
             <>
-              <span>Don't have an account?</span>{" "}
-              <button onClick={handleChange}>Sign up</button>
+              <span>Don't have an account? - Sign Up</span>{" "}
             </>
           ) : (
             <>
-              <span>Already have an account?</span>{" "}
-              <button onClick={handleChange}>Log in</button>
+              <span>Already have an account? - Login</span>{" "}
             </>
           )}
         </div>
         {/** Forgot password button */}
-        <button className="authentication__button">
+        {/** <Link to="/fielddesc" className="myfields__fieldDetailsNameLink">{name}</Link> */}
+        <button className="authentication__button" onClick={() => navigate("/recovery")}>
           <OpenInNewIcon />
           <span>Forgot password?</span>
         </button>
         {/** Privacy button */}
-        <button className="authentication__button">
+        <button className="authentication__button" onClick={() => navigate("/privacy")}>
           <OpenInNewIcon />
           <span>Privacy</span>
         </button>
         {/** About Us button */}
-        <button className="authentication__button">
+        <button className="authentication__button" onClick={() => navigate("/about")}>
           <OpenInNewIcon />
           <span>About Us</span>
         </button>

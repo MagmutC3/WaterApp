@@ -50,3 +50,7 @@
   font-weight: bolder;
   margin-left: 10px;
 }
+
+.authentication__buttonText > link {
+  text-decoration: none;
+}

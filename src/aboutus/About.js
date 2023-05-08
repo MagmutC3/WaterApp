@@ -9,21 +9,27 @@ function About() {
     <div className="about">
       <h1>About Us</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        porttitor dolor non quam laoreet, ac malesuada justo blandit. Nulla
-        convallis felis eget nulla dictum bibendum. Vestibulum lobortis
-        scelerisque diam, vitae ultricies leo blandit eu. Maecenas gravida
-        posuere sapien at egestas. Sed porta metus id ante bibendum, in ultrices
-        nibh rhoncus. Vestibulum ante ipsum primis in faucibus orci luctus et
-        ultrices posuere cubilia Curae; Fusce fringilla urna id tellus convallis
-        malesuada. Praesent malesuada turpis eget ante maximus, non dictum nibh
-        consequat. Sed iaculis euismod quam, a lacinia justo elementum at. Duis
-        semper, libero in hendrerit interdum, purus est sagittis magna, et
-        maximus dolor sapien eget mauris. Vestibulum ante ipsum primis in
-        faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur
-        euismod quam mi, in lacinia justo pretium vel.
+        Welcome to SatAgro, a cutting-edge technology company dedicated to
+        providing farmers with the tools they need to monitor and optimize their
+        crop yields. Our mission is to revolutionize the agricultural industry
+        by leveraging the latest advances in satellite imagery and data
+        analytics to help farmers increase their productivity, reduce their
+        costs, and minimize their environmental impact. At SatAgro, we believe
+        that farmers are the backbone of our society, and we are committed to
+        supporting their efforts with innovative and reliable solutions. Our
+        team of experienced engineers, data scientists, and agriculture experts
+        work tirelessly to develop and refine our products, ensuring that they
+        meet the highest standards of performance and quality. Whether you're a
+        small-scale farmer or a large commercial operation, SatAgro has the
+        tools you need to succeed. From real-time field monitoring to precision
+        irrigation management, our products are designed to help you make
+        data-driven decisions and optimize your crop yields. We are proud to be
+        at the forefront of the agricultural technology revolution, and we look
+        forward to partnering with you to help you achieve your goals.
       </p>
-      <button onClick={() => history(-1)}>Go Back</button>
+      <div className="about__button">
+        <button onClick={() => history(-1)}>Go Back</button>
+      </div>
     </div>
   );
 }

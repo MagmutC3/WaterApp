@@ -10,6 +10,7 @@ import MyFields from "./myfields/MyFields";
 import Authentication from "./authentication/Authentication";
 import About from "./aboutus/About";
 import Privacy from "./aboutprivacy/Privacy";
+import Recovery from "./authentication/Recovery";
 import Tools from "./tools/Tools";
 import FieldDesc from "./myfields/fields/FieldDesc";
 import Geo from "./myfields/fields/Geo";
@@ -54,22 +55,28 @@ function App() {
             {user ? (
               <Routes>
                 <Route path="/" element={<MyFields />} />
+                <Route path="/recovery" element={<Recovery />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/privacy" element={<Privacy />} />
+                <Route path="/notFound" element={<NotFound />}></Route>
+                <Route path="*" element={<Navigate to="/notFound" replace />} />
+                {/** paths below require login */}
                 <Route path="/tools" element={<Tools />} />
                 <Route path="/geo" element={<Geo />}></Route>
                 <Route path="/fielddesc" element={<FieldDesc />}></Route>
-                <Route path="/notFound" element={<NotFound />}></Route>
-                <Route path="*" element={<Navigate to="/notFound" replace />} />
               </Routes>
             ) : (
               <Routes>
                 <Route path="/" element={<Authentication />} />
+                <Route path="/recovery" element={<Recovery />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/privacy" element={<Privacy />} />
-                <Route path="/tools" element={<Tools />} />
                 <Route path="/notFound" element={<NotFound />}></Route>
                 <Route path="*" element={<Navigate to="/notFound" replace />} />
+                {/** paths requiring login should "Navigate to=" authentication */}
+                <Route path="/tools" element={<Navigate to="/" replace />} />
+                <Route path="/geo" element={<Navigate to="/" replace />}></Route>
+                <Route path="/fielddesc" element={<Navigate to="/" replace />}></Route>
               </Routes>
             )}
           </>
