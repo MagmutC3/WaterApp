@@ -12,6 +12,7 @@ import About from "./aboutus/About";
 import Privacy from "./aboutprivacy/Privacy";
 import Tools from "./tools/Tools";
 import FieldDesc from "./myfields/fields/FieldDesc";
+import Geo from "./myfields/fields/Geo";
 import NotFound from "./notfound/NotFound";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -56,6 +57,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/tools" element={<Tools />} />
+                <Route path="/geo" element={<Geo />}></Route>
                 <Route path="/fielddesc" element={<FieldDesc />}></Route>
                 <Route path="/notFound" element={<NotFound />}></Route>
                 <Route path="*" element={<Navigate to="/notFound" replace />} />

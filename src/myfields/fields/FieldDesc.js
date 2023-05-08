@@ -18,6 +18,10 @@ import {
 } from "react-router-dom";
 import "../../App.css";
 import "./FieldDesc.css";
+import { MapContainer, TileLayer } from "react-leaflet";
+import osm from "../../osm-providers";
+import "leaflet/dist/leaflet.css";
+import BasicMap from "./Geo";
 
 function FieldDesc() {
   const history = useNavigate ();
@@ -71,23 +75,24 @@ function FieldDesc() {
     setSoilCondition(soilCondition);
   }
 
-
-
-
     
   return (
     <div className="field-desc">
-      <h1>Field Details</h1>
-      {/* <h2>Latitude: 1</h2>
-      <h2>Longitude: 1</h2> */}
+      <h1>Field Details: nazwa pola</h1>
+  
       <br></br>
       <button onClick={() => IrrigationNow()}>Irrigation Now</button>
+      <p className="coordinates">Last irrigation date is: {lastIrrigation}</p>
+      <p className="coordinates">Next irrigation date is: {nextIrrigation}</p>
+      <p className="coordinates">Soil condition is: {soilCondition}</p>
       <br></br>
-      <p>Last irrigation date is: {lastIrrigation}</p>
-      <p>Next irrigation date is: {nextIrrigation}</p>
-      <p>Soil Condition: {soilCondition}</p>
+      <BasicMap className="fieldMap"> </BasicMap>
+      <p className="coordinates">Latitude: 1</p>
+      <p className="coordinates">Longitude: 1</p>
       <button onClick={() => history(-1)}>Go Back</button>
+      
     </div>
+    
   );
 }
 
