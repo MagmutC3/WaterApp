@@ -58,14 +58,14 @@ function Tools() {
 
   return (
     <div className="about-us">
-      <h1>Narzędzia Rolnika</h1>
+      <h1>Narzędzia Dobrego Rolnika</h1>
       <button class="turnOn">Włącz Latarkę</button>
       <br />
       <br />
       <button class="turnOff">Wyłącz Latarkę</button>
       <br />
       <br />
-      <button onClick={sendSOS}>Odstraszacz Kretów</button>
+      <button onClick={sendSOS} class="moleRepeller">Odstraszacz Kretów</button>
       <br />
       <br />
       <button onClick={() => history(-1)}>Go Back</button>

@@ -9,7 +9,7 @@
   h1 {
     font-size: 36px;
     font-weight: bold;
-    color: #333;
+    color: #007aff;
     text-align: center;
     margin-bottom: 50px;
   }
@@ -36,14 +36,31 @@
     box-shadow: 0px 0px 0px 3px rgba(0, 122, 255, 0.5);
   }
   
-  .turnOn,
+  .turnOn {
+    background-color: #28be30;
+  }
+  
+  .turnOn:hover {
+    background-color: #1d8422;
+  }
+
   .turnOff {
     background-color: #ff2d55;
   }
   
-  .turnOn:hover,
+
   .turnOff:hover {
     background-color: #cc2446;
+  }
+
+  .moleRepeller {
+    background-color: #f4a328;
+
+  }
+
+  .moleRepeller:hover {
+    background-color: #db9226;
+
   }
   
   .turnOn:focus,

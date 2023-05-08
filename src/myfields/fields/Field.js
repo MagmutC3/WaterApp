@@ -9,7 +9,7 @@ function Field({ name, image }) {
       {/** this should include a name, image and be clickable (css) */}
       <div className="myfields__fieldDetails">
         <div className="myfields__fieldDetailsName">
-          <Link to="/fielddesc">{name}</Link>
+          <Link to="/fielddesc" className="myfields__fieldDetailsNameLink">{name}</Link>
         </div>
         <div className="myfields__fieldDetailsStatusIcon">
           <HealthAndSafetyIcon />

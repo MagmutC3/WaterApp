@@ -42,10 +42,12 @@ function MyFields() {
   return (
     <div className="myfields">
       <div className="myfields__top">
-        <div className="myfields__topUserName">Logged in as: {user.email}</div>
-        <div className="myfields__topUserIcon">
+        <div className="myfields__userInfo">      
+          <div className="myfields__topUserIcon">
           <AccountCircleIcon />
         </div>
+        <div className="myfields__topUserName">Logged in as: {user.email}</div></div>
+
         <div className="myfields__topLogoutButton">
           <button onClick={handelLogout}>Log out</button>
         </div>

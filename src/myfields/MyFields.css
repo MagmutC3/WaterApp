@@ -12,10 +12,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 97.5%;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.myfields__userInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .myfields__topUserName {
@@ -43,6 +50,7 @@
   width: 100%;
   max-width: 1000px;
   margin-top: 20px;
+  
 }
 
 .myfields__bottom {
@@ -66,6 +74,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.myfields__bottomToolsButton button:hover {
+
+/* .myfields__bottomToolsButton button:hover {
   background-color: #0055ff;
-}
+} */

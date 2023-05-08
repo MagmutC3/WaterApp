@@ -17,6 +17,7 @@ import {
   Routes
 } from "react-router-dom";
 import "../../App.css";
+import "./FieldDesc.css";
 
 function FieldDesc() {
   const history = useNavigate ();

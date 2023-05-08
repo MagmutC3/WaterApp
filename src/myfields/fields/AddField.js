@@ -65,7 +65,7 @@ function AddField() {
 
   return (
     <div className="addfield">
-      <h1>AddField</h1>
+      <h1 >Add Field</h1>
       <form className="addfield__form" onSubmit={handleSubmit}>
         <label>
           Name:
