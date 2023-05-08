@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./AddField.css";
-import { db } from "./../../config/firebase";
+import { auth, db } from "./../../config/firebase";
+import { doc, setDoc, Timestamp } from "firebase/firestore";
 
 function AddField() {
   const [name, setName] = useState("");
@@ -18,51 +19,49 @@ function AddField() {
     );
   };
 
-
-
-
-
-
-
-
-  
-
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Create a new document in the "fields" collection
-    db.collection("fields")
-      .add({
-        name,
-        latitude: parseFloat(latitude),
-        longitude: parseFloat(longitude),
+    setDoc(doc(db, "users/" + auth.currentUser.uid + "/fields", name), {
+      longitude: parseFloat(longitude),
+      latitude: parseFloat(latitude),
+    })
+      .then(() => {
+        setDoc(
+          doc(
+            db,
+            "users/" + auth.currentUser.uid + "/fields/" + name + "/watering",
+            "init"
+          ),
+          {
+            volume: 0,
+            timestamp: Timestamp.now(),
+          }
+        );
       })
       .then(() => {
-        console.log("Field added to Firestore!");
+        console.log("Document successfully written!");
         setName("");
         setLatitude("");
         setLongitude("");
-      })
-      .catch((error) => {
-        console.error("Error adding field to Firestore: ", error);
       });
+
+    // Create a new document in the "fields" collection
+    // db.collection("fields")
+    //   .add({
+    //     name,
+    //     latitude: parseFloat(latitude),
+    //     longitude: parseFloat(longitude),
+    //   })
+    //   .then(() => {
+    //     console.log("Field added to Firestore!");
+    //     setName("");
+    //     setLatitude("");
+    //     setLongitude("");
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error adding field to Firestore: ", error);
+    //   });
   };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   return (
     <div className="addfield">
@@ -70,15 +69,27 @@ function AddField() {
       <form className="addfield__form" onSubmit={handleSubmit}>
         <label>
           Name:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </label>
         <label>
           Latitude:
-          <input type="text" value={latitude} onChange={(e) => setLatitude(e.target.value)} />
+          <input
+            type="text"
+            value={latitude}
+            onChange={(e) => setLatitude(e.target.value)}
+          />
         </label>
         <label>
           Longitude:
-          <input type="text" value={longitude} onChange={(e) => setLongitude(e.target.value)} />
+          <input
+            type="text"
+            value={longitude}
+            onChange={(e) => setLongitude(e.target.value)}
+          />
         </label>
         <button type="button" onClick={handleLocationClick}>
           Get My Location

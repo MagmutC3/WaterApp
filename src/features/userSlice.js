@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// user: "any name", // input example name when debugging
-// otherwise set to null
 const initialState = {
   user: null,
   isLoading: true,
