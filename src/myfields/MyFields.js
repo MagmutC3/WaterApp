@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./MyFields.css";
 import Field from "./fields/Field";
+import AddField from "./fields/AddField";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { useDispatch, useSelector } from "react-redux";
 import { signOut } from "firebase/auth";
 import { logOutUser } from "../features/userSlice";
 import { auth } from "../config/firebase";
 import { useNavigate } from "react-router-dom";
-import AddField from "./fields/AddField";
 
 function MyFields() {
   const navigate = useNavigate();
