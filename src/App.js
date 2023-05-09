@@ -63,7 +63,8 @@ function App() {
                 {/** paths below require login */}
                 <Route path="/tools" element={<Tools />} />
                 <Route path="/geo" element={<Geo />}></Route>
-                <Route path="/fielddesc" element={<FieldDesc />}></Route>
+                {/* <Route path="/fielddesc" element={<FieldDesc />}></Route> */}
+                <Route path="/fielddesc/:name" element={<FieldDesc />}></Route>
               </Routes>
             ) : (
               <Routes>

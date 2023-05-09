@@ -6,10 +6,14 @@ import { Link } from "react-router-dom";
 function Field({ name, image }) {
   return (
     <div className="myfields__field">
-      {/** this should include a name, image and be clickable (css) */}
       <div className="myfields__fieldDetails">
         <div className="myfields__fieldDetailsName">
-          <Link to="/fielddesc" className="myfields__fieldDetailsNameLink">{name}</Link>
+          <Link
+            to={`/fielddesc/${name}`}
+            className="myfields__fieldDetailsNameLink"
+          >
+            {name}
+          </Link>
         </div>
         <div className="myfields__fieldDetailsStatusIcon">
           <HealthAndSafetyIcon />
